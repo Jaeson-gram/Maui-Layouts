@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Layouts.AbsoluteLayoutDemo"
+             Title="AbsoluteLayoutDemo"
+             BackgroundColor="HotPink">
+    <AbsoluteLayout>
+        <Button Text="Click Me!"
+                AbsoluteLayout.LayoutBounds="50, 20, 60, 40" />
+
+        <!--                                 x,  y,  width, height-->
+            
+        
+        
+        <Button Text="Maybe Click!" 
+                AbsoluteLayout.LayoutBounds=".5, .5, .25, .05"
+                AbsoluteLayout.LayoutFlags="All"/>
+                
+                <!--The LayoutFlags is used to tell the compiler that you want to use percentages to set any or all of the x, y, width, and height values
+                All states that all the values will be set using percentages. So that it knows how to translate the values. You can set the:
+                XProportional - just the x value,
+                YProportional - just the y value,
+                WidthProportional - just the w value,
+                HeightProportional - just the h value,
+                SizeProportional - both the w and the h values will be set using percentages,
+                PositionProportional - both the x and the y values will be set using percentages.
+                
+                -->
+    </AbsoluteLayout>
+</ContentPage>

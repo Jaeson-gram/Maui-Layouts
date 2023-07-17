@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Layouts.FlexLayoutDemo"
+             Title="FlexLayoutDemo"
+             BackgroundColor="AliceBlue">
+    
+    <!--. The FlexLayout automatically aligns the contents of a page. And it wraps it's content whenever it deems necessary, so it's good for various screens
+            It works like the StackLayout, but has some properties that the StackLayout does not, which we'll do below-->
+    
+    <FlexLayout Direction="Column">
+        
+        <!-- HEADER-->
+        <Label Text="Header"
+               FontSize="Header"
+               BackgroundColor="Gray"
+               HorizontalTextAlignment="Center"/>
+
+        <!--CONTENT-->
+        <FlexLayout FlexLayout.Grow="1">
+            <!--Main content-->
+            <!--<Label FlexLayout.Grow="1">
+                
+                <Label.BackgroundColor>
+                Violet
+                </Label.BackgroundColor>
+
+                <Label.HorizontalTextAlignment>
+                    Center
+                </Label.HorizontalTextAlignment>
+
+                <Label.VerticalTextAlignment>
+                    Center
+                </Label.VerticalTextAlignment>
+
+                <Label.Text>
+                    Once again, I fell, to rise
+                    But this time, again, "I will not fall!"
+                    And if I fall, again, I'll rise
+                    For what is life, but Rise and Fall
+                </Label.Text>
+            </Label>-->
+
+            <Label Text="CONTENT"
+                   FontSize="20"
+                   BackgroundColor="White"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FlexLayout.Grow="1"/>
+
+            <!-- NAvigation Items-->
+            <BoxView FlexLayout.Order="-1"
+                     Color="MidnightBlue"
+                     FlexLayout.Basis="50"/>
+
+
+            <!-- NAvigation Items-->
+            <BoxView FlexLayout.Basis="50"
+                     Color="MidnightBlue"/>
+
+        </FlexLayout>
+
+        <!-- FOOTER -->
+        <Label Text="Footer"
+               FontSize="Small"
+               BackgroundColor="DarkSlateGray"
+               HorizontalTextAlignment="Center"/>
+
+    </FlexLayout>
+</ContentPage>
